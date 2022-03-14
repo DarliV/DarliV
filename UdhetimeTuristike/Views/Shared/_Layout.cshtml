@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Travel - @ViewBag.Title</title>
+    <link rel="icon" href="~/Images/officePin.png" type="image/x-icon" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <img src="~/Images/officePin.png" width="65" height="65"/>
+        @Html.ActionLink("Office Travel", "Index", "Home", new { area = "" }, new { @class = "navbar-brand ml-2" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", "", new { @class = "nav-link active" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("About", "About", "Home", "", new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Contact", "Contact", "Home", "", new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Services", "Italy", "Home", "", new { @class = "nav-link" })
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Manage </a>
+                        <div class="dropdown-menu">
+                            @Html.ActionLink("Paketat", "Index", "PaketaInfoes", "", new { @class = "dropdown-item" })
+                            @Html.ActionLink("Kontaktet", "Index", "FaqeKontakt", "", new { @class = "dropdown-item" })
+
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <div class="dropdown-divider"></div>
+                                @Html.ActionLink("Perdoruesit", "Index", "Administrimi", "", new { @class = "dropdown-item" })
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+
+    </nav>
+
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        @RenderBody()
+
+        <footer>
+            <div class="section-5 text-center">
+                <h4 style="margin-top:5%;">Find Places To Travel From Office Travel</h4>
+                <h4 class="my-4"> If You Need Any Help</h4>
+            </div>
+
+            <div class="form-inline justify-content-center">
+                <input type="text" name="Email" id="Email" placeholder="Email" size="40" class="form-control px-4 py-2" style="margin-bottom: 1%" />
+                <p>@Html.ActionLink("Contact Us", "Contact", "Home", "", new { @class = "btn btn bg-danger px-4 py-2 text-white" }) </p>
+            </div>
+
+            <div class="social" style="margin-top:2%;">
+                <div class="d-flex flex-row justify-content-center">
+                    <a href="#" style="margin-right:1%;"><i class="fab fa-facebook-f m-2"></i></a>
+                    <a href="#" style="margin-right:1%;"><i class="fab fa-twitter m-2"></i></a>
+                    <a href="#" style="margin-right:1%;"><i class="fab fa-instagram m-2"></i></a>
+                    <a href="#" style="margin-right:1%;"><i class="fab fa-youtube m-2"></i></a>
+                </div>
+            </div>
+
+            <hr style="width:80vw; margin: 15px auto;"/>
+            <h5 style="color:lightseagreen; text-align:center;">&copy;  @DateTime.Now.Year -Office Travel</h5>
+
+        </footer>
+
+    </div>
+
+    <script type="text/javascript">
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

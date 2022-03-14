@@ -1,0 +1,317 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+    
+    
+    <main>
+
+        <div class="container-fluid p-0">
+            <div class="site-content">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column">
+                        <h1 class="site-title">Travel Around The World</h1>
+                        <p class="site-desc">We will make your dream come true!</p>
+                        <div class="d-flex flex-row">
+                            @Html.ActionLink("Begin Now", "Italy", "Home", null, new { @class = "btn site-btn1 px-4 py-3 mr-4 btn-primary" })
+                            @Html.ActionLink("Know More", "About", "Home", null, new { @class = "btn site-btn2 px-4 py-3 mr-4 btn-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-1">
+            <div class="container my-4 text-center">
+                <h1 class="heading-1">Amazing Places To Visit</h1>
+                <h1 class="heading-2">Learn different types of cultures!</h1>
+                <p class="para-1">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                    sunt explicabo.
+                </p>
+
+                <hr class="my-4">
+
+                <!--Carousel Wrapper-->
+                <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                    <!--Controls-->
+                    <div class="controls-top">
+                        <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-arrow-circle-left"></i></a>
+                        <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                    <!--/.Controls-->
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#multi-item-example" data-slide-to="1"></li>
+                        <li data-target="#multi-item-example" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!--First slide-->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Services/Italy/MilanoServices.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Milano </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Italy", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Rome.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Rome </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Italy", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Services/Italy/VeniceServices.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Venice </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Italy", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Second slide-->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Berlin.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Berlin </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Germany", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Munich.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Munich </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Germany", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Frankfurt.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Frankfurt </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "Germany", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Third slide-->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Paris.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Paris </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "France", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Lyon.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Lyon </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "France", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 clearfix d-none d-md-block">
+                                    <div class="card mb-2">
+                                        <img class="card-img-top" src="~/Images/Cities/Nice.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> Nice </h4>
+                                            <p class="card-text">
+                                                Some quick example text to build on the card title and make up the bulk of the
+                                                card's content.
+                                            </p>
+                                            @Html.ActionLink("Visit Us", "France", "Home", null, new { @class = "btn btn-primary" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-2">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-end">
+                    <div class="d-flex flex-column m-4">
+                        <h1 class="heading-1">Share your thoughts!</h1>
+                        <p class="para">
+                            Some quick example text to build on the card title and make up the bulk of the
+                            card's content.
+                        </p>
+                        <p>@Html.ActionLink("Show", "Contact", "Home", "", new { @class = "btn btn-danger" }) </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-question fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Ask Us</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-seedling fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Marketing</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-search fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Search</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-sliders-h fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Customize</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-rocket fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Speed</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex flex-row">
+                            <i class="fas fa-user-shield fa-3x m-2"></i>
+                            <div class="d-flex flex-column">
+                                <h3 class="m-2">Authorized</h3>
+                                <p class="m-2">
+                                    Some quick example text to build on the card title and make up the bulk of the
+                                    card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-4 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img src="~/Images/thinking.jpg" width="590" alt="" />
+                    </div>
+                    <div class="col-md-5">
+                        <h1 class="text-white">Don't know where to start from ?</h1>
+                        <a href="#">Join us</a>
+                        <p class="para-1 text-white">
+                            Some quick example text to build on the card title and make up the bulk of the
+                            card's content.Some quick example text to build on the card title and make up the bulk of the
+                            card's content.Some quick example text to build on the card title and make up the bulk of the
+                            card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>

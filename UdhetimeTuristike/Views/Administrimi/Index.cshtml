@@ -1,0 +1,59 @@
+﻿@model IEnumerable<UdhetimeTuristike.Models.ApplicationUser>
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Perdoruesit</h2>
+<table class="table table-bordered">
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.UserName)</th>
+        <th> @Html.DisplayNameFor(model => model.Email) </th>
+        <th> @Html.DisplayNameFor(model => model.Roles) </th>
+        <th> @Html.DisplayNameFor(model => model.Datelindja) </th>
+        <th> @Html.DisplayNameFor(model => model.PhoneNumber) </th>
+        <th> @Html.DisplayNameFor(model => model.TwoFactorEnabled) </th>
+        <th class="text-center">Delete</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(modelItem => item.UserName) </td>
+            <td> @Html.DisplayFor(modelItem => item.Email) </td>
+            <td>
+                @if (item.Email == "andidarli@udhetimeturistike.com")
+                {
+                    <p>Admin</p>
+
+                }
+                else
+                {
+                    <p> User </p>
+                }
+            </td>
+            <td> @Html.DisplayFor(modelItem => item.Datelindja) </td>
+            <td>
+                @if (item.PhoneNumber != null)
+                {@Html.DisplayFor(modelItem => item.PhoneNumber)}
+            else
+            { <p class="text-center"><i>null</i></p>}
+            </td>
+            <td> @Html.DisplayFor(modelItem => item.TwoFactorEnabled) </td>
+            <td>
+                @if (item.Email != "andidarli@udhetimeturistike.com")
+                {
+
+                    <p class="text-center">@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "kot1 hover" })</p>
+
+                }
+                else
+                {
+                    <p class="text-center">Cannot be Deleted</p>
+                }
+            </td>
+        </tr>
+    }
+</table>
